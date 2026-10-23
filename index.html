@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portofolio Mutiara Indah Gunawan — mahasiswa Rekayasa Perangkat Lunak, pengembangan web dan mobile."
+    />
+    <title>Mutiara Indah Gunawan | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+            colors: { brand: "#3569D5", navy: "#172C53", ice: "#EEF5FF" },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+      body {
+        font-family: Inter, sans-serif;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.65s,
+          transform 0.65s;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      .nav-link.active {
+        color: #3569d5;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-700">
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur-lg"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8"
+        aria-label="Navigasi utama"
+      >
+        <a href="#home" class="text-xl font-extrabold tracking-tight text-navy"
+          >Mutiara<span class="text-brand">.</span></a
+        >
+        <button
+          id="menuBtn"
+          class="rounded-lg p-2 text-navy md:hidden"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <svg
+            width="25"
+            height="25"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div
+          id="menu"
+          class="hidden absolute left-0 right-0 top-full flex-col gap-5 border-b bg-white px-6 py-5 shadow-sm md:static md:flex md:flex-row md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0 md:shadow-none"
+        >
+          <a class="nav-link text-sm font-medium hover:text-brand" href="#home"
+            >Home</a
+          >
+          <a class="nav-link text-sm font-medium hover:text-brand" href="#about"
+            >About</a
+          >
+          <a
+            class="nav-link text-sm font-medium hover:text-brand"
+            href="#skills"
+            >Skills</a
+          >
+          <a
+            class="nav-link text-sm font-medium hover:text-brand"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="nav-link text-sm font-medium hover:text-brand"
+            href="#experience"
+            >Experience</a
+          >
+          <a
+            class="nav-link text-sm font-medium hover:text-brand"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        id="home"
+        class="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-ice via-white to-blue-50 pt-24"
+      >
+        <div
+          class="pointer-events-none absolute -right-20 top-24 h-72 w-72 rounded-full bg-blue-200/40 blur-3xl"
+        ></div>
+        <div
+          class="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:px-8"
+        >
+          <div class="reveal">
+            <span
+              class="inline-flex rounded-full border border-blue-200 bg-white px-4 py-2 text-xs font-semibold text-brand"
+              >Welcome to my portfolio</span
+            >
+            <p class="mt-8 text-lg font-medium text-brand">Hello, I'm</p>
+            <h1
+              class="mt-3 text-4xl font-extrabold leading-tight tracking-tight text-navy sm:text-5xl lg:text-6xl"
+            >
+              Mutiara Indah<br />Gunawan<span class="text-brand">.</span>
+            </h1>
+            <p class="mt-5 text-lg font-semibold text-slate-700">
+              Software Engineering Student
+              <span class="text-brand">|</span> Mobile & Web Developer
+            </p>
+            <p class="mt-5 max-w-lg leading-8 text-slate-600">
+              Mahasiswa D4 Rekayasa Perangkat Lunak di Politeknik Negeri
+              Indramayu yang tertarik pada pengembangan aplikasi web dan mobile
+              serta terus mengembangkan kemampuan melalui proyek akademik.
+            </p>
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                class="rounded-xl bg-brand px-6 py-3 font-semibold text-white shadow-lg shadow-blue-200 transition hover:-translate-y-1 hover:bg-blue-700"
+                >View Projects ↗</a
+              >
+              <a
+                href="#contact"
+                class="rounded-xl border border-blue-200 bg-white px-6 py-3 font-semibold text-navy transition hover:border-brand hover:text-brand"
+                >Contact Me</a
+              >
+            </div>
+          </div>
+          <div class="reveal mx-auto w-full max-w-md">
+            <div
+              class="relative rounded-[2rem] border border-blue-100 bg-white p-5 shadow-2xl shadow-blue-100"
+            >
+              <div
+                class="flex aspect-[4/4] items-center justify-center overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-blue-100 to-slate-100"
+              >
+                <img
+                  src="assets/profile.jpg"
+                  alt="Foto Mutiara Indah Gunawan"
+                  class="h-full w-full object-cover"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div
+                  style="display: none"
+                  class="h-full w-full flex-col items-center justify-center gap-3 text-center text-brand"
+                >
+                  <svg
+                    width="90"
+                    height="90"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  >
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 22v-2a8 8 0 0116 0v2" />
+                  </svg>
+                  <span class="text-sm font-semibold"
+                    >Tambahkan foto di assets/profile.jpg</span
+                  >
+                </div>
+              </div>
+              <div
+                class="absolute -bottom-5 -left-5 rounded-2xl border border-blue-100 bg-white px-5 py-4 shadow-lg"
+              >
+                <p class="text-xs text-slate-500">
+                  Currently learning & building
+                </p>
+                <p class="mt-1 font-bold text-navy">Web & Mobile Apps</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="py-24">
+        <div class="reveal mx-auto max-w-6xl px-6 md:px-8">
+          <p class="text-sm font-bold uppercase tracking-[.2em] text-brand">
+            Get to know me
+          </p>
+          <h2 class="mt-2 text-3xl font-extrabold text-navy md:text-4xl">
+            About Me
+          </h2>
+          <div class="mt-9 grid gap-10 md:grid-cols-[1.5fr_1fr]">
+            <div>
+              <p class="leading-8">
+                Saya merupakan mahasiswa D4 Rekayasa Perangkat Lunak yang
+                memiliki minat pada pengembangan perangkat lunak, khususnya
+                aplikasi web dan mobile. Melalui proyek akademik, saya terbiasa
+                bekerja secara individu maupun dalam tim, mulai dari analisis
+                kebutuhan, perancangan sistem, implementasi, hingga pengujian
+                aplikasi.
+              </p>
+              <p class="mt-4 leading-8">
+                Saya terus belajar dan terbuka terhadap pengalaman baru untuk
+                mengembangkan keterampilan teknis maupun kemampuan bekerja sama.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-blue-100 bg-ice p-7">
+              <p class="text-sm font-bold text-brand">EDUCATION</p>
+              <h3 class="mt-3 text-xl font-bold text-navy">
+                Politeknik Negeri Indramayu
+              </h3>
+              <p class="mt-2">D4 Rekayasa Perangkat Lunak</p>
+              <p class="mt-2 text-sm text-slate-500">2024 – Sekarang</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="bg-slate-50 py-24">
+        <div class="reveal mx-auto max-w-6xl px-6 md:px-8">
+          <p class="text-sm font-bold uppercase tracking-[.2em] text-brand">
+            What I work with
+          </p>
+          <h2 class="mt-2 text-3xl font-extrabold text-navy md:text-4xl">
+            My Skills
+          </h2>
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <div
+              class="rounded-2xl border border-slate-100 bg-white p-7 shadow-sm"
+            >
+              <h3 class="text-xl font-bold text-navy">Technical Skills</h3>
+              <div class="mt-6 flex flex-wrap gap-2" id="techSkills"></div>
+            </div>
+            <div
+              class="rounded-2xl border border-slate-100 bg-white p-7 shadow-sm"
+            >
+              <h3 class="text-xl font-bold text-navy">Soft Skills</h3>
+              <div class="mt-6 flex flex-wrap gap-2" id="softSkills"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="py-24">
+        <div class="mx-auto max-w-6xl px-6 md:px-8">
+          <div class="reveal">
+            <p class="text-sm font-bold uppercase tracking-[.2em] text-brand">
+              Selected work
+            </p>
+            <h2 class="mt-2 text-3xl font-extrabold text-navy md:text-4xl">
+              Featured Projects
+            </h2>
+            <p class="mt-4 text-slate-500">
+              Beberapa proyek akademik yang pernah dan sedang saya kerjakan.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-8 lg:grid-cols-2">
+            <article
+              class="reveal overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-lg shadow-slate-100 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="flex h-64 items-center justify-center overflow-hidden bg-blue-50"
+              >
+                <img
+                  src="assets/apkonkos.png"
+                  alt="Dokumentasi aplikasi APKONKOS"
+                  class="h-full w-full object-cover"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'block';
+                  "
+                />
+                <p
+                  style="display: none"
+                  class="px-5 text-center font-semibold text-brand"
+                >
+                  Screenshot APKONKOS<br /><span class="text-sm font-normal"
+                    >assets/apkonkos.png</span
+                  >
+                </p>
+              </div>
+              <div class="p-7">
+                <p
+                  class="text-xs font-bold uppercase tracking-widest text-brand"
+                >
+                  Web & Mobile • 2025–2026
+                </p>
+                <h3 class="mt-3 text-2xl font-bold text-navy">APKONKOS</h3>
+                <p class="mt-3 leading-7 text-slate-600">
+                  Aplikasi pencarian dan pemesanan kos serta kontrakan berbasis
+                  web dan mobile. Pengembangan mencakup analisis kebutuhan,
+                  perancangan sistem, dan fitur pencarian serta pemesanan
+                  hunian.
+                </p>
+                <p class="mt-3 text-sm leading-6 text-slate-500">
+                  <strong>Kontribusi:</strong> Analisis kebutuhan, UML/SRS, dan
+                  pengembangan aplikasi dalam proyek akademik.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span
+                    class="rounded-lg bg-ice px-3 py-1 text-xs font-semibold text-brand"
+                    >Flutter</span
+                  ><span
+                    class="rounded-lg bg-ice px-3 py-1 text-xs font-semibold text-brand"
+                    >Laravel</span
+                  ><span
+                    class="rounded-lg bg-ice px-3 py-1 text-xs font-semibold text-brand"
+                    >PHP</span
+                  ><span
+                    class="rounded-lg bg-ice px-3 py-1 text-xs font-semibold text-brand"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="reveal overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-lg shadow-slate-100 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="flex min-h-[390px] items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 p-6 sm:min-h-[450px]"
+              >
+                <div
+                  class="flex h-[355px] w-[180px] items-center justify-center overflow-hidden rounded-[2rem] border-[7px] border-slate-800 bg-white shadow-xl sm:h-[410px] sm:w-[205px]"
+                >
+                  <img
+                    src="assets/roadis.png"
+                    alt="Tampilan aplikasi mobile ROADIS"
+                    class="h-full w-full object-contain"
+                    onerror="
+                      this.style.display = 'none';
+                      this.nextElementSibling.style.display = 'block';
+                    "
+                  />
+                  <p
+                    style="display: none"
+                    class="px-3 text-center text-xs font-semibold text-brand"
+                  >
+                    Screenshot portrait ROADIS<br /><span class="font-normal"
+                      >assets/roadis.png</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="p-7">
+                <p
+                  class="text-xs font-bold uppercase tracking-widest text-brand"
+                >
+                  Mobile • Dalam pengembangan
+                </p>
+                <h3 class="mt-3 text-2xl font-bold text-navy">ROADIS</h3>
+                <p class="mt-3 leading-7 text-slate-600">
+                  Aplikasi pelaporan kerusakan jalan yang menggabungkan
+                  pelaporan berbasis lokasi dengan alur deteksi kerusakan jalan
+                  untuk mendukung penanganan laporan oleh pihak terkait.
+                </p>
+                <p class="mt-3 text-sm leading-6 text-slate-500">
+                  <strong>Kontribusi:</strong> Pengembangan mobile Flutter,
+                  termasuk Bantuan & FAQ serta pengembangan antarmuka dan fitur
+                  profil aplikasi.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span
+                    class="rounded-lg bg-ice px-3 py-1 text-xs font-semibold text-brand"
+                    >Flutter</span
+                  ><span
+                    class="rounded-lg bg-ice px-3 py-1 text-xs font-semibold text-brand"
+                    >Dart</span
+                  ><span
+                    class="rounded-lg bg-ice px-3 py-1 text-xs font-semibold text-brand"
+                    >GetX</span
+                  ><span
+                    class="rounded-lg bg-ice px-3 py-1 text-xs font-semibold text-brand"
+                    >REST API</span
+                  >
+                </div>
+                <a
+                  href="https://github.com/faldyardiansyah/Roadis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-6 inline-block text-sm font-semibold text-brand hover:underline"
+                  >View Repository ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="experience" class="bg-slate-50 py-24">
+        <div class="reveal mx-auto max-w-6xl px-6 md:px-8">
+          <p class="text-sm font-bold uppercase tracking-[.2em] text-brand">
+            Beyond coding
+          </p>
+          <h2 class="mt-2 text-3xl font-extrabold text-navy md:text-4xl">
+            Experience
+          </h2>
+          <div
+            class="mt-10 rounded-3xl border border-slate-100 bg-white p-8 shadow-sm md:p-10"
+          >
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-bold text-navy">
+                  Ketua Subdivisi Kaderisasi
+                </h3>
+                <p class="mt-2 text-slate-600">
+                  HIMA Rekayasa Perangkat Lunak — Politeknik Negeri Indramayu
+                </p>
+              </div>
+              <span
+                class="rounded-full bg-ice px-4 py-2 text-sm font-semibold text-brand"
+                >2025–2026</span
+              >
+            </div>
+            <ul class="mt-6 list-disc space-y-3 pl-5 leading-7 text-slate-600">
+              <li>
+                Memimpin dan mengoordinasikan anggota Subdivisi Kaderisasi dalam
+                menjalankan program kerja.
+              </li>
+              <li>
+                Merencanakan dan melaksanakan kegiatan kaderisasi mahasiswa RPL.
+              </li>
+              <li>
+                Membagi tugas dan berkoordinasi dalam pelaksanaan kegiatan.
+              </li>
+              <li>
+                Membantu menyusun konsep, jadwal, dan kebutuhan kegiatan
+                kaderisasi.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="py-24">
+        <div class="reveal mx-auto max-w-4xl px-6 text-center">
+          <p class="text-sm font-bold uppercase tracking-[.2em] text-brand">
+            Let's connect
+          </p>
+          <h2 class="mt-2 text-3xl font-extrabold text-navy md:text-4xl">
+            Get In Touch
+          </h2>
+          <p class="mx-auto mt-5 max-w-xl leading-8 text-slate-600">
+            Terbuka untuk kesempatan magang, kolaborasi, dan pengalaman baru
+            dalam pengembangan perangkat lunak.
+          </p>
+          <div class="mt-9 flex flex-wrap justify-center gap-3">
+            <a
+              href="mailto:tiaragunawan81@gmail.com"
+              class="rounded-xl bg-brand px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+              >Send Email ↗</a
+            >
+            <!-- GANTI # dengan URL berbagi Google Drive CV kamu (akses: Siapa saja yang memiliki link). -->
+            <a
+              href="#"
+              id="cvLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl border border-blue-200 px-6 py-3 font-semibold text-brand transition hover:bg-ice"
+              >View CV ↗</a
+            >
+            <!-- GANTI # dengan URL profil GitHub pribadi kamu. -->
+            <a
+              href="#"
+              id="githubLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl border border-blue-200 px-6 py-3 font-semibold text-brand transition hover:bg-ice"
+              >GitHub Profile ↗</a
+            >
+          </div>
+          <p class="mt-6 text-sm text-slate-500">tiaragunawan81@gmail.com</p>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="border-t border-slate-100 py-7 text-center text-sm text-slate-500"
+    >
+      © 2026 Mutiara Indah Gunawan. All rights reserved.
+    </footer>
+    <a
+      href="#home"
+      aria-label="Kembali ke atas"
+      class="fixed bottom-6 right-6 rounded-full bg-brand px-4 py-3 font-bold text-white shadow-lg transition hover:bg-blue-700"
+      >↑</a
+    >
+    <script>
+      const CV_DRIVE_URL =
+        "https://drive.google.com/file/d/1z6_OGKLVgoAfB7JE5PlPK6QkDRyTIP4i/view?usp=drivesdk";
+      const GITHUB_PROFILE_URL = "https://github.com/mutttignw11";
+      const setupExternalLink = (id, url, label) => {
+        const el = document.getElementById(id);
+        if (url) {
+          el.href = url;
+        } else {
+          el.removeAttribute("target");
+          el.addEventListener("click", (e) => {
+            e.preventDefault();
+            alert(
+              "Silakan isi URL " +
+                label +
+                " di bagian JavaScript index.html terlebih dahulu.",
+            );
+          });
+        }
+      };
+      setupExternalLink("cvLink", CV_DRIVE_URL, "Google Drive CV");
+      setupExternalLink("githubLink", GITHUB_PROFILE_URL, "profil GitHub");
+      const menuBtn = document.getElementById("menuBtn"),
+        menu = document.getElementById("menu");
+      menuBtn.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden") === false;
+        menu.classList.toggle("flex", open);
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+      document.querySelectorAll("#menu a").forEach((a) =>
+        a.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          menu.classList.remove("flex");
+          menuBtn.setAttribute("aria-expanded", "false");
+        }),
+      );
+      const makeBadges = (id, items) => {
+        const target = document.getElementById(id);
+        items.forEach((item) => {
+          const span = document.createElement("span");
+          span.className =
+            "rounded-lg border border-blue-100 bg-ice px-3 py-2 text-sm font-medium text-navy";
+          span.textContent = item;
+          target.appendChild(span);
+        });
+      };
+      makeBadges("techSkills", [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "Laravel",
+        "Flutter",
+        "Dart",
+        "MySQL",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Docker",
+        "GitHub Actions",
+      ]);
+      makeBadges("softSkills", [
+        "Komunikasi",
+        "Kerja sama tim",
+        "Manajemen waktu",
+        "Pemecahan masalah",
+        "Tanggung jawab",
+        "Adaptasi",
+        "Bekerja mandiri",
+      ]);
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              observer.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.08 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+      const sections = document.querySelectorAll("main section[id]"),
+        links = document.querySelectorAll(".nav-link");
+      const activeObserver = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              links.forEach((l) =>
+                l.classList.toggle(
+                  "active",
+                  l.getAttribute("href") === "#" + e.target.id,
+                ),
+              );
+            }
+          }),
+        { rootMargin: "-25% 0px -60% 0px" },
+      );
+      sections.forEach((s) => activeObserver.observe(s));
+    </script>
+  </body>
+</html>
