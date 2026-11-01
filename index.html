@@ -57,6 +57,27 @@
       .nav-link.active {
         color: #3569d5;
       }
+      .project-card {
+        box-shadow: 0 10px 22px rgba(23, 44, 83, 0.08);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease,
+          background-color 0.2s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(53, 105, 213, 0.2);
+        box-shadow: 0 18px 34px rgba(23, 44, 83, 0.12);
+      }
+      .project-card:active {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(23, 44, 83, 0.1);
+      }
+      .project-card:focus-visible {
+        outline: 2px solid rgba(53, 105, 213, 0.45);
+        outline-offset: 3px;
+      }
     </style>
   </head>
   <body class="bg-white text-slate-700">
@@ -285,7 +306,7 @@
           </div>
           <div class="mt-12 grid gap-8 lg:grid-cols-2">
             <article
-              class="reveal flex h-full flex-col overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-lg shadow-slate-100 transition hover:-translate-y-1 hover:shadow-xl"
+              class="project-card reveal flex h-full flex-col overflow-hidden rounded-3xl border border-slate-100 bg-white"
             >
               <div
                 class="flex h-[390px] items-center justify-center overflow-hidden bg-blue-50 sm:h-[450px]"
@@ -343,7 +364,7 @@
               </div>
             </article>
             <article
-              class="reveal flex h-full flex-col overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-lg shadow-slate-100 transition hover:-translate-y-1 hover:shadow-xl"
+              class="project-card reveal flex h-full flex-col overflow-hidden rounded-3xl border border-slate-100 bg-white"
             >
               <div
                 class="flex h-[390px] items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 p-4 sm:h-[450px] sm:p-6"
